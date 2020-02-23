@@ -10,5 +10,6 @@ services: # Here we define our service(s)
         - '/app/node_modules'
       ports: 
         - '4201:4200' # Port mapping
+      
      # command: > 
      #    - "npm install && ng serve --host 0.0.0.0 --port 4200"

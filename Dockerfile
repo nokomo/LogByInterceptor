@@ -20,6 +20,13 @@ RUN ["npm", "install", "-g", "@angular/cli"]
 # add app
 COPY . /app
 
+# run tests
+RUN ng test --watch=false
+RUN ng e2e --port 4202
+
+# generate build
+#RUN ng build --output-path=dist
+
 # start app
 CMD ["npm", "start", "--", "--host", "0.0.0.0", "--poll", "500"]
  
