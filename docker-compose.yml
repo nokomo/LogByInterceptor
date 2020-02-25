@@ -1,15 +1,15 @@
 version: '3.7' # We use version 3.5 syntax
 services: # Here we define our service(s)
-    angular-service: # The name of the service
-      container_name: logbyinterceptor-dev  # Container name
-      build: 
+    angular-service: # The name of the service     
+      build:         
         context: .
         dockerfile: Dockerfile
-      volumes: # Volume binding
-        - '.:/app' 
+        target: dev-stage
+      volumes:
+        - '.:/app'
         - '/app/node_modules'
-      ports: 
-        - '4201:4200' # Port mapping
-      
+      ports:
+        - '4201:4200'
+     
      # command: > 
      #    - "npm install && ng serve --host 0.0.0.0 --port 4200"
